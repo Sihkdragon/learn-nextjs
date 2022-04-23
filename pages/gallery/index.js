@@ -17,11 +17,21 @@ const index = () => {
       });
   }, []);
 
-  if (loading) return <p>Loading....</p>;
-  if (!dataImage) return <p>Failed to Fetch Data</p>;
+  if (loading)
+    return (
+      <p className="min-h-screen w-full flex justify-center items-center text-5xl text-indigo-400">
+        Loading....
+      </p>
+    );
+  if (!dataImage)
+    return (
+      <p className="min-h-screen w-full flex justify-center items-center text-5xl text-indigo-400">
+        Failed to Fetch Data
+      </p>
+    );
 
   return (
-    <>
+    <div className="min-h-screen">
       <Header title="Gallery" />
       <TopItems bigTitleContent="Gallery" />
 
@@ -36,7 +46,7 @@ const index = () => {
           />
         );
       })}
-    </>
+    </div>
   );
 };
 

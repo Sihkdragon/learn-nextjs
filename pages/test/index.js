@@ -80,6 +80,10 @@ export default function Test() {
           </tbody>
         </table>
       </div>
+      <div className="mt-8"></div>
+      <TopItems bigTitleContent="Loader" />
+      <h2 className="text-2xl text-indigo-600">Spinner</h2>
+      <div className="border-4 animate-spin border-indigo-200 w-5 h-5 border-t-rose-300 rounded-[50%]"></div>
     </div>
   );
 }
