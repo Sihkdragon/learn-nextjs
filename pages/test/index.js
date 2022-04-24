@@ -38,7 +38,7 @@ export default function Test() {
       <TopItems
         bigTitleContent={`Hello ${AdminName}`}
         button={true}
-        destination={"spinner"}
+        destination={"test/spinner"}
       />
       <div className="bg-indigo-100 text-indigo-900 p-2 mt-5 rounded shadow-md">
         <h3 className="text-lg text-indigo-600 mb-5">Table Data</h3>
@@ -57,20 +57,27 @@ export default function Test() {
           <tbody>
             {data.map((user, id) => {
               return (
-                <tr key={id}>
-                  <td>{user.id}</td>
-                  <td>{user.name}</td>
-                  <td>{user.email}</td>
-                  <td>
+                <tr
+                  key={id}
+                  className="group hover:border-l-2 border-l-rose-400"
+                >
+                  <td className="group-hover:text-white">{user.id}</td>
+                  <td className="group-hover:text-white">{user.name}</td>
+                  <td className="group-hover:text-white">{user.email}</td>
+                  <td className="group-hover:text-white">
                     {user.address.street +
                       " " +
                       user.address.suite +
                       " " +
                       user.address.city}
                   </td>
-                  <td className="text-center">{user.phone}</td>
-                  <td className="text-center">{user.website}</td>{" "}
-                  <td className="text-center">
+                  <td className="group-hover:text-white text-center">
+                    {user.phone}
+                  </td>
+                  <td className="group-hover:text-white text-center">
+                    {user.website}
+                  </td>{" "}
+                  <td className="group-hover:text-white text-center">
                     <button className="tablebtn bg-lime-500 hover:bg-lime-600 ">
                       Edit
                     </button>

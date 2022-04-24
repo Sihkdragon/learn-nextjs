@@ -5,7 +5,7 @@ const TopItems = ({ bigTitleContent, button, destination }) => {
     <div className="">
       <div className="flex w-full justify-between">
         <BigTitle>{bigTitleContent}</BigTitle>
-        <Button />
+        {button ? <Button Destination={destination} /> : ""}
       </div>
       <hr className="border rounded-full border-indigo-400 my-10" />
     </div>

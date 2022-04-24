@@ -1,15 +1,15 @@
 import { useRouter } from "next/router";
 
-const index = ({ ButtonType }) => {
+const index = ({ ButtonType, Destination }) => {
   const router = useRouter();
   return (
     <div
-      className="btn-link h-8"
+      className="btn-link h-8 capitalize"
       onClick={() => {
-        router.push("/test/spinner");
+        router.push(`/test/${Destination}`);
       }}
     >
-      Go To Spinner Test...
+      Go To {Destination} Test
     </div>
   );
 };

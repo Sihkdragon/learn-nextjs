@@ -11,7 +11,6 @@ const Test = () => {
     <div>
       <Header title={`Testing ${slug}`} />
       <TopItems bigTitleContent={`This is ${slug}`} />
-      <Spinner SpinnerCaption="Loading..." />
     </div>
   );
 };

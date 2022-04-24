@@ -1,7 +1,5 @@
-import { ArrowCircleRightIcon, CogIcon } from "@heroicons/react/solid";
+import { ArrowCircleRightIcon } from "@heroicons/react/solid";
 import SideMenuLink from "../../atom/SideMenuLink";
-import SideMenuBottom from "../../atom/SideMenuBottom";
-import { LogoutIcon } from "@heroicons/react/outline";
 import { useRouter } from "next/router";
 import MenuBottom from "../../molecules/MenuBottom";
 export default function sidebar() {
