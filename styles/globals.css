@@ -32,4 +32,13 @@
   .tablebtn {
     @apply text-white text-sm rounded-lg px-2 py-1 transition duration-300;
   }
+  .spinner {
+    @apply animate-spin border-indigo-300 border-t-rose-400 rounded-full;
+  }
+  .btn-link {
+    @apply flex text-center justify-center items-center text-indigo-700 transition-colors duration-300 cursor-pointer  hover:border-b border-indigo-400;
+  }
+  .btn {
+    @apply rounded-lg flex text-center justify-center items-center text-indigo-700 transition-colors duration-300 cursor-pointer  hover:bg-indigo-300;
+  }
 }

@@ -3,6 +3,7 @@ import TopItems from "../../components/molecules/TopItems";
 import Image from "next/image";
 import { useEffect } from "react";
 import { useState } from "react";
+import Spinner from "../../components/atom/Spinner";
 const index = () => {
   const [imageURL, setImage] = useState("");
   const [loading, setLoading] = useState(false);
@@ -19,13 +20,13 @@ const index = () => {
 
   if (loading)
     return (
-      <p className="min-h-screen w-full flex justify-center items-center text-5xl text-indigo-400">
-        Loading....
-      </p>
+      <div className="min-h-screen w-full flex justify-center items-center">
+        <Spinner SpinnerCaption="Loading..." />;
+      </div>
     );
   if (!dataImage)
     return (
-      <p className="min-h-screen w-full flex justify-center items-center text-5xl text-indigo-400">
+      <p className="min-h-screen w-full flex justify-center items-center text-5xl text-rose-400">
         Failed to Fetch Data
       </p>
     );

@@ -1,8 +1,8 @@
 import Header from "../../components/organism/Header";
 import admin from "../../databases/data";
 import { useEffect, useState } from "react";
-import BigTitle from "../../components/atom/BigTitle";
 import TopItems from "../../components/molecules/TopItems";
+import Spinner from "../../components/atom/Spinner";
 export default function Test() {
   const [data, setData] = useState();
   const [isLoading, setLoading] = useState(false);
@@ -21,8 +21,8 @@ export default function Test() {
 
   if (isLoading)
     return (
-      <div className=" w-full justify-center items-center flex min-h-screen  text-indigo-800 text-7xl">
-        Loading ...
+      <div className="min-h-screen w-full flex justify-center items-center">
+        <Spinner SpinnerCaption="Loading..." />;
       </div>
     );
   if (!data)
@@ -35,7 +35,11 @@ export default function Test() {
   return (
     <div>
       <Header title="Test" />
-      <TopItems bigTitleContent={`Hello ${AdminName}`} />
+      <TopItems
+        bigTitleContent={`Hello ${AdminName}`}
+        button={true}
+        destination={"spinner"}
+      />
       <div className="bg-indigo-100 text-indigo-900 p-2 mt-5 rounded shadow-md">
         <h3 className="text-lg text-indigo-600 mb-5">Table Data</h3>
         <table className="table-auto w-full">
@@ -81,9 +85,6 @@ export default function Test() {
         </table>
       </div>
       <div className="mt-8"></div>
-      <TopItems bigTitleContent="Loader" />
-      <h2 className="text-2xl text-indigo-600">Spinner</h2>
-      <div className="border-4 animate-spin border-indigo-200 w-5 h-5 border-t-rose-300 rounded-[50%]"></div>
     </div>
   );
 }
