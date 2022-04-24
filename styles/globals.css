@@ -39,6 +39,12 @@
     @apply flex text-center justify-center items-center text-indigo-700 transition-colors duration-300 cursor-pointer  hover:border-b border-indigo-400;
   }
   .btn {
-    @apply rounded-lg flex text-center justify-center items-center text-indigo-700 transition-colors duration-300 cursor-pointer  hover:bg-indigo-300;
+    @apply w-44 rounded p-1 flex text-center justify-center items-center text-white bg-indigo-500 transition-colors duration-300 cursor-pointer  hover:bg-indigo-300;
+  }
+  .label-input {
+    @apply text-rose-400;
+  }
+  .input-text {
+    @apply max-w-sm border-2 rounded p-1 border-indigo-400 outline-none text-indigo-300;
   }
 }
