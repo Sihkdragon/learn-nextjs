@@ -1,27 +1,32 @@
 import Header from "../../components/organism/Header";
 import TopItems from "../../components/molecules/TopItems";
 import admin from "../../databases/data";
+import Spinner from "../../components/atom/Spinner";
 import { useTable } from "react-table";
-import { useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
 const index = () => {
   const data = useMemo(
     () => [
       {
-        col1: "Hello",
-
-        col2: "World",
+        nama: "Ditotisi Rasyid Sumpena",
+        quotes:
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, explicabo.",
+        address: "Jl. Sukajadi 123",
+        gaji: 2500000,
       },
-
       {
-        col1: "react-table",
-
-        col2: "rocks",
+        nama: "Ditotisi Rasyid Sumpena",
+        quotes:
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, explicabo.",
+        address: "Jl. Sukajadi 123",
+        gaji: 2500000,
       },
-
       {
-        col1: "whatever",
-
-        col2: "you want",
+        nama: "Ditotisi Rasyid Sumpena",
+        quotes:
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, explicabo.",
+        address: "Jl. Sukajadi 123",
+        gaji: 2500000,
       },
     ],
 
@@ -31,15 +36,25 @@ const index = () => {
   const columns = useMemo(
     () => [
       {
-        Header: "Column 1",
+        Header: "Nama",
 
-        accessor: "col1", // accessor is the "key" in the data
+        accessor: "nama", // accessor is the "key" in the data
       },
 
       {
-        Header: "Column 2",
+        Header: "Quotes",
 
-        accessor: "col2",
+        accessor: "quotes",
+      },
+      {
+        Header: "Address",
+
+        accessor: "address",
+      },
+      {
+        Header: "Gaji",
+
+        accessor: "gaji",
       },
     ],
 
@@ -62,22 +77,17 @@ const index = () => {
     <>
       <Header title="Dashboard" />
       <TopItems bigTitleContent={` ${admin}, Welcome to Dashboard`} />
-      <table {...getTableProps()} style={{ border: "solid 1px blue" }}>
+      <table
+        {...getTableProps()}
+        className="table-auto border border-indigo-900"
+      >
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
                 <th
                   {...column.getHeaderProps()}
-                  style={{
-                    borderBottom: "solid 3px red",
-
-                    background: "aliceblue",
-
-                    color: "black",
-
-                    fontWeight: "bold",
-                  }}
+                  className=" border border-indigo-900"
                 >
                   {column.render("Header")}
                 </th>
@@ -96,13 +106,7 @@ const index = () => {
                   return (
                     <td
                       {...cell.getCellProps()}
-                      style={{
-                        padding: "10px",
-
-                        border: "solid 1px gray",
-
-                        background: "papayawhip",
-                      }}
+                      className="border border-indigo-900"
                     >
                       {cell.render("Cell")}
                     </td>
