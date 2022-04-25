@@ -21,7 +21,7 @@ const index = () => {
         destination="formvariant"
       />
       <h3 className="text-lg text-indigo-600 my-5">Biodata Form</h3>
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 gap-x-10">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="flex flex-col space-y-2">
             <label htmlFor="nama" className="label-input">
@@ -45,7 +45,7 @@ const index = () => {
               id="email"
               defaultValue=""
               {...register("email", { required: true })}
-              className="input-text mr-2"
+              className="input-text"
               placeholder="example@domain.com"
             />
             {errors.email && (
@@ -59,7 +59,7 @@ const index = () => {
               id="address"
               defaultValue=""
               {...register("address", { required: true })}
-              className="input-text mr-2"
+              className="input-text"
               placeholder="Street Name No. X"
             />
             {errors.address && (
@@ -73,7 +73,7 @@ const index = () => {
               id="phone"
               defaultValue=""
               {...register("phone", { required: true })}
-              className="input-text mr-2"
+              className="input-text"
               placeholder="08xxxxxxxx"
             />
             {errors.phone && (
@@ -87,7 +87,7 @@ const index = () => {
               id="website"
               defaultValue=""
               {...register("website", { required: true })}
-              className="input-text mr-2"
+              className="input-text"
               placeholder="yourwebsite.com"
             />
             {errors.website && (

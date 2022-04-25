@@ -5,10 +5,16 @@ import SideMenuBottom from "../atom/SideMenuBottom";
 const MenuBottom = () => {
   return (
     <div className="MenuBottom">
-      <SideMenuBottom icon={<CogIcon className="w-8 text-white mr-1" />}>
+      <SideMenuBottom
+        icon={<CogIcon className="w-8 text-white mr-1" />}
+        href="/settings"
+      >
         Settings
       </SideMenuBottom>
-      <SideMenuBottom icon={<LogoutIcon className="w-8 text-white mr-1" />}>
+      <SideMenuBottom
+        icon={<LogoutIcon className="w-8 text-white mr-1" />}
+        href="login"
+      >
         Logout
       </SideMenuBottom>
     </div>

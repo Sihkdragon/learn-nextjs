@@ -1,10 +1,9 @@
 import Link from "next/link";
 
-const SideMenuBottom = ({ icon, children }) => {
+const SideMenuBottom = ({ icon, children, href }) => {
   return (
-    <Link href={"/logout"}>
+    <Link href={href}>
       <div className="SidebarFooter">
-        {/* <LogoutIcon className="w-8 text-white mr-1" /> */}
         {icon}
         {children}
       </div>

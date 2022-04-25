@@ -19,11 +19,13 @@ export default function sidebar() {
       </div>
 
       <SideMenuLink destination="/">Home</SideMenuLink>
+      <SideMenuLink destination="/dashboard">Dashboard</SideMenuLink>
       <SideMenuLink destination="/test">Testing</SideMenuLink>
       <SideMenuLink destination="/gallery">Gallery</SideMenuLink>
       <SideMenuLink destination="/form">Form</SideMenuLink>
 
       {/* Bottom Thing */}
+
       <MenuBottom />
     </section>
   );
