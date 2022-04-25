@@ -18,7 +18,8 @@ export default function sidebar() {
         <ArrowCircleRightIcon className="w-12 mx-auto text-white mt-3" />
       </div>
 
-      <SideMenuLink destination="/">Home</SideMenuLink>
+      <SideMenuLink destination="/home">Home</SideMenuLink>
+      <SideMenuLink destination="/">Main</SideMenuLink>
       <SideMenuLink destination="/dashboard">Dashboard</SideMenuLink>
       <SideMenuLink destination="/test">Testing</SideMenuLink>
       <SideMenuLink destination="/gallery">Gallery</SideMenuLink>
