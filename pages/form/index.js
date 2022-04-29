@@ -71,6 +71,7 @@ const index = () => {
             </label>
             <input
               id="phone"
+              type="tel"
               defaultValue=""
               {...register("phone", { required: true })}
               className="input-text"
